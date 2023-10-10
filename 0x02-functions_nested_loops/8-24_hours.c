@@ -1,22 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * print_to_98 - prints all natural numbers from n to 98
+ * jack_bauer - prints every minute of the day of Jack Bauer
  *
- * @n: starting point
- *
- * Return: returns nothing
+ * starting from 00:00 to 23:59
  *
  */
-void print_to_98(int n)
+void jack_bauer(void)
 {
-	if (n <= 98)
+	int i, j;
+
+	i = 0;
+
+	while (i < 24)
 	{
-		for (n = n; n <= 97; n++)
-			printf("%d, ", n);
+		j = 0;
+
+		while (j < 60)
+		{
+			_putchar((i / 10) + '0');
+			_putchar((i % 10) + '0');
+			_putchar(':');
+			_putchar((j / 10) + '0');
+			_putchar((j % 10) + '0');
+			_putchar('\n');
+			j++;
+		}
+		i++;
 	}
-	else
-		for (n = n; n > 98; n--)
-			printf("%d, ", n);
-	printf("98\n");
 }
