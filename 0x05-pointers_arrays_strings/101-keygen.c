@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - entry point generates a random password
- *
+* main - entry point generates a random password
+*
  * Return: the generated password
- */
+*/
 int main(void)
 {
 char c;

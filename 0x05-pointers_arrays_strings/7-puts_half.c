@@ -1,39 +1,26 @@
 #include "main.h"
 /**
-*puts_half - puts half of a string
-*@str: string
-*Return:void
-*/
+ * puts_half - a function that prints half of a string
+ * if odd len, n = (length_of_the_string - 1) / 2
+ * @str: input
+ * Return: half of input
+ */
 void puts_half(char *str)
 {
-int len = _strlen(str);
 
-if (len % 2 == 0)
-len = len / 2;
+	int n, m, len;
 
-else
-len = (len + 1) / 2;
+	len = 0;
 
-while (str[len] != '\0')
-{
-_putchar(str[len]);
-len++;
-}
-_putchar('\n');
-}
+	for (n = 0; str[n] != '\0'; n++)
+		len++;
 
+	m = (len / 2);
 
-/**
- *_strlen - returns the length of a string
- * @s: string
- *Return: returns lenght;
- */
-int _strlen(char *s)
-{
-int count, inc;
-inc = 0;
-for (count = 0; s[count] != '\0'; count++)
-inc++;
+	if ((len % 2) == 1)
+		m = ((len + 1) / 2);
 
-return (inc);
+	for (n = m; str[n] != '\0'; n++)
+		_putchar(str[n]);
+	_putchar('\n');
 }
