@@ -15,10 +15,13 @@ size_t list_len(const list_t *h)
   size_t count = 0;
   const list_t *ptr;
   ptr = h;
+
+  if (h == NULL)
+    return (0);
     
   while(ptr!=NULL){
     ptr = ptr -> next;
     count++;
   }
-  return count;
+  return (count);
 }
