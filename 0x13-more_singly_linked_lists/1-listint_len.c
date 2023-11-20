@@ -7,12 +7,12 @@
  *
  * Return: size of the list
  */
-
-size_t listint_len(const listint_t *h){
-    int count = 0;
-    while(h){
-        count ++;
-        h = h->next;
-    }
-    return (count);
+size_t listint_len(const listint_t *h)
+{
+	if (h == NULL)
+		return (0);
+	if (h->next == NULL)
+		return (1);
+	else
+		return (listint_len(h->next) + 1);
 }
